@@ -1,5 +1,5 @@
 services:
-  sfsrv:
+  jhls:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:

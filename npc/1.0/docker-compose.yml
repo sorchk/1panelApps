@@ -1,5 +1,5 @@
 services:
-  serverstatus:
+  npc:
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host
