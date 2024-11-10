@@ -1,0 +1,12 @@
+services:
+  serverstatus:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    environment:
+      - TZ=Asia/Shanghai
+      - SERVER=${NPS_SERVER}
+      - VKEY=${NPS_KEY}
+    image: sorc/npc:latest
+    labels:
+      createdBy: "Apps"
