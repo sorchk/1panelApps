@@ -5,9 +5,9 @@ services:
     privileged: true
     network_mode: host
     volumes:
-      -v /lib/modules:/lib/modules:ro \
-      -v /etc/resolv.conf:/etc/resolv.conf \
-      -v /etc/v2raya:/etc/v2raya \
+      -v /lib/modules:/lib/modules:ro
+      -v /etc/resolv.conf:/etc/resolv.conf
+      -v /etc/v2raya:/etc/v2raya
     environment:
       - TZ=Asia/Shanghai
       - IPTABLES_MODE=legacy
