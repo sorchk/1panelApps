@@ -1,0 +1,15 @@
+services:
+  serverstatus:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data/db/:/etc/x-ui/
+      - ./data/cert/:/root/cert/
+    environment:
+      - TZ=Asia/Shanghai
+      - XRAY_VMESS_AEAD_FORCED=false
+    tty: true
+    image: ghcr.io/mhsanaei/3x-ui:latest
+    labels:
+      createdBy: "Apps"

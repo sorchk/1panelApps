@@ -1,0 +1,18 @@
+services:
+  sfsrv:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:12345"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+    image: sorc/sfsrv:latest
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

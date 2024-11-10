@@ -1,0 +1,13 @@
+services:
+  serverstatus:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data/conf:/app/conf
+    environment:
+      - TZ=Asia/Shanghai
+    tty: true
+    image: sorc/nserver:latest
+    labels:
+      createdBy: "Apps"
