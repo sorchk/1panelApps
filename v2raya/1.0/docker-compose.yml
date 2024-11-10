@@ -13,6 +13,7 @@ services:
       - IPTABLES_MODE=legacy
       - V2RAYA_NFTABLES_SUPPORT=off
       - V2RAYA_LOG_FILE=/tmp/v2raya.log
+      - V2RAYA_ADDRESS=${SERVER_IP}:${SERVER_PORT}
     image: mzz2017/v2raya:latest
     labels:
       createdBy: "Apps"
