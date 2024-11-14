@@ -7,7 +7,6 @@ services:
       - ./data/conf.d:/etc/nginx/conf.d
     environment:
       - TZ=Asia/Shanghai
-      - NGINX_PORT=${NGINX_PORT}
     image: nginx:latest
     labels:
       createdBy: "Apps"
