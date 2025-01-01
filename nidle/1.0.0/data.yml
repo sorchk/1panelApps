@@ -1,0 +1,8 @@
+additionalProperties:
+  formFields:
+    - default: /tmp/nidle
+      edit: true
+      envKey: DATA_DIR
+      labelEn: data directory
+      labelZh: 数据目录
+      type: text
