@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 8004
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: web端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8005
+      edit: true
+      envKey: PANEL_APP_PORT_SRV
+      labelEn: Port
+      labelZh: 状态端口
+      required: true
+      rule: paramPort
+      type: number

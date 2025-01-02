@@ -1,0 +1,15 @@
+services:
+  serverstatus:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_SRV}:35601"
+      - "${PANEL_APP_PORT_HTTP}:80"
+    volumes:
+      - ./data/server/config.json:/ServerStatus/server/config.json 
+      - ./data/web/json:/usr/share/nginx/html/json
+    environment:
+      - TZ=Asia/Shanghai
+    image: cppla/serverstatus:latest
+    labels:
+      createdBy: "Apps"
