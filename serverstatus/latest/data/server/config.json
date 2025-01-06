@@ -1,0 +1,67 @@
+{
+    "servers": [
+        {
+            "username": "s00",
+            "name": "bj",
+            "type": "vm",
+            "host": "host0",
+            "location": "北京",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        },
+        {
+            "username": "s01",
+            "name": "lax36",
+            "type": "VM",
+            "host": "host1",
+            "location": "洛杉矶",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        },
+        {
+            "username": "s02",
+            "name": "los38",
+            "type": "VM",
+            "host": "host2",
+            "location": "洛杉矶",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        },
+        {
+            "username": "s03",
+            "name": "oph",
+            "type": "VM",
+            "host": "host3",
+            "location": "凤凰城",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        },
+        {
+            "username": "s04",
+            "name": "ojp",
+            "type": "VM",
+            "host": "host4",
+            "location": "大板",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        },
+        {
+            "username": "s05",
+            "name": "bwh49",
+            "type": "VM",
+            "host": "host5",
+            "location": "洛杉矶",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        },
+        {
+            "username": "s06",
+            "name": "respi",
+            "type": "Embed",
+            "host": "host6",
+            "location": "天津",
+            "password": "a8i3d2e9",
+            "monthstart": 1
+        }
+    ]
+}
