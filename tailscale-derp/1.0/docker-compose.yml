@@ -1,0 +1,41 @@
+services:
+  node:
+    image: tailscale/tailscale:v1.82.5
+    container_name: tailscale-node
+    environment:
+      TS_AUTHKEY: ${TS_AUTHKEY}
+      TS_HOSTNAME: ${TS_HOSTNAME}
+      TS_EXTRA_ARGS: ${TS_EXTRA_ARGS}
+    volumes:
+      - ./data:/var/lib/tailscale
+      - ./tmp:/tmp
+    network_mode: "host"
+    cap_add:
+      - NET_ADMIN
+    restart: always
+    labels:
+      createdBy: "Apps"
+  derp:
+    image: sorc/tailscale-derp:1.82.5
+    container_name: tailscale-derp
+    volumes:
+      - ${SSL_KEY}:/apps/certdir/${HOSTNAME}.key:ro
+      - ${SSL_CRT}:/apps/certdir/${HOSTNAME}.crt:ro
+      - ./tmp/tailscaled.sock:/var/run/tailscale/tailscaled.sock:ro
+    environment:
+      HOSTNAME: ${HOSTNAME}
+      PORT: ${PORT}
+      STUN_PORT: ${STUN_PORT}
+    networks:
+      - 1panel-network
+    ports:
+      - "${PORT}:${PORT}"
+      - "${STUN_PORT}:${STUN_PORT}/udp"
+    restart: always
+    depends_on:
+      - node
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
