@@ -1,5 +1,5 @@
 additionalProperties:
-  key: tailscale   #应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  key: tailscalenode   #应用的 key ，仅限英文，用于在 Linux 创建文件夹
   name: Tailscale  #应用名称
   tags:
     - Tool #应用标签，可以有多个，请参照下方的标签列表

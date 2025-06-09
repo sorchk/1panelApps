@@ -11,8 +11,8 @@ additionalProperties:
     - default: 3478
       edit: true
       envKey: STUN_PORT
-      labelEn: Port
-      labelZh: 端口
+      labelEn: tun Port
+      labelZh: 隧道端口
       required: true
       rule: paramPort
       type: number
