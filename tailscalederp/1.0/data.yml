@@ -22,39 +22,5 @@ additionalProperties:
       labelEn: Domain
       labelZh: 域名
       required: true
-      type: text
-    - default: "/datadisk/sslcert/privkey.pem"
-      edit: true
-      envKey: SSL_KEY
-      labelEn: SSL Key
-      labelZh: SSL密钥
-      required: true
-      type: text
-    - default: "/datadisk/sslcert/fullchain.pem"
-      edit: true
-      envKey: SSL_CRT
-      labelEn: SSL Cert
-      labelZh: SSL证书
-      required: true
-      type: text
-    - default: ""
-      edit: true
-      envKey: TS_HOSTNAME
-      labelEn: Nodename
-      labelZh: 节点名
-      required: true
-      type: text
-    - default: ""
-      edit: true
-      envKey: TS_AUTHKEY
-      labelEn: Auth Key
-      labelZh: 认证密钥
-      required: true
-      type: text
-    - default: "--advertise-exit-node"
-      edit: true
-      envKey: TS_EXTRA_ARGS
-      labelEn: Extra Args
-      labelZh: 额外参数
-      required: false
+      rule: paramDomain
       type: text
