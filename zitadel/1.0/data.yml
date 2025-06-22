@@ -1,0 +1,72 @@
+additionalProperties:
+    formFields:
+        - child:
+            default: ""
+            envKey: PANEL_DB_HOST
+            required: true
+            type: service
+          default: postgresql
+          envKey: PANEL_DB_TYPE
+          labelEn: Database Service
+          labelZh: 数据库服务
+          required: true
+          type: apps
+          values:
+            - label: PostgreSQL
+              value: postgresql
+        - default: zitadel
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: zitadel
+          envKey: PANEL_DB_USER
+          labelEn: User
+          labelZh: 数据库用户
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: zitadel
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Password
+          labelZh: 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: postgres
+          envKey: PANEL_DB_ADMIN
+          labelEn: AdminUser
+          labelZh: 数据库管理员
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: postgres
+          envKey: PANEL_DB_ADMIN_PASSWORD
+          labelEn: AdminPassword
+          labelZh: 数据库管理员密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: 8901
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: MasterkeyNeedsToHave32Characters
+          envKey: PANEL_MASTER_KEY
+          labelEn: Masterkey
+          labelZh: 主密钥
+          random: true
+          required: true
+          rule: paramCommon
+          type: text

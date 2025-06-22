@@ -1,0 +1,26 @@
+services:
+  zitadel:
+    image: 'ghcr.io/zitadel/zitadel:latest'
+    container_name: zitadel
+    restart: 'always'
+    networks:
+      - 1panel-network
+    command: 'start-from-init --masterkey "${PANEL_MASTER_KEY}" --tlsMode disabled'
+    environment:
+      ZITADEL_DATABASE_POSTGRES_HOST: db
+      ZITADEL_DATABASE_POSTGRES_PORT: 5432
+      ZITADEL_DATABASE_POSTGRES_DATABASE: ${PANEL_DB_NAME}
+      ZITADEL_DATABASE_POSTGRES_USER_USERNAME: ${PANEL_DB_USER}
+      ZITADEL_DATABASE_POSTGRES_USER_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE: disable
+      ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME: ${PANEL_DB_ADMIN}
+      ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD: ${PANEL_DB_ADMIN_PASSWORD}
+      ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE: disable
+      ZITADEL_EXTERNALSECURE: false
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080/tcp"
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
