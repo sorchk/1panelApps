@@ -5,23 +5,12 @@ services:
     restart: 'always'
     networks:
       - 1panel-network
-    command: 'start-from --init--masterkeyFromEnv --tlsMode external'
+    command: 'start-from-init --masterkeyFromEnv --tlsMode external'
     environment:
-      - ZITADEL_DATABASE_POSTGRES_HOST=${PANEL_DB_HOST}
-      - ZITADEL_DATABASE_POSTGRES_PORT=${PANEL_DB_PORT}
-      - ZITADEL_DATABASE_POSTGRES_DATABASE={PANEL_DB_NAME}
-      - ZITADEL_DATABASE_POSTGRES_USER_USERNAME=${PANEL_DB_USER}
-      - ZITADEL_DATABASE_POSTGRES_USER_PASSWORD=${PANEL_DB_USER_PASSWORD}
       - ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE=disable
-      - ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME=${PANEL_DB_ADMIN}
-      - ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD=${PANEL_DB_ADMIN_PASSWORD}
       - ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE=disable
-      - ZITADEL_LOG_LEVEL=debug
-      - ZITADEL_MASTERKEY=${ZITADEL_MASTERKEY}
       - ZITADEL_EXTERNALSECURE=true
       - ZITADEL_TLS_ENABLED="false"
-      - ZITADEL_EXTERNALPORT=443
-      - ZITADEL_EXTERNALDOMAIN=auth.sction.com
     ports:
       - "${PANEL_APP_PORT_HTTP}:8080/tcp"
     labels:
