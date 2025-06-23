@@ -63,10 +63,18 @@ additionalProperties:
           rule: paramPort
           type: number
         - default: d41d8cd98f00b204e9800998ecf8427e
-          envKey: PANEL_MASTER_KEY
+          envKey: ZITADEL_MASTERKEY
           labelEn: Masterkey
           labelZh: 主密钥
           random: true
           required: true
           rule: paramCommon
+          type: text
+        - default: https://auth.sction.com
+          edit: true
+          envKey: ZITADEL_EXTERNALDOMAIN
+          labelEn: External URL
+          labelZh: 外部访问地址
+          required: true
+          rule: paramHttp
           type: text
