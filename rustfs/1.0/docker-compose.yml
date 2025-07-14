@@ -12,9 +12,9 @@ services:
       - RUSTFS_CONSOLE_ENABLE=true
       - RUSTFS_LOG_LEVEL=info
       - RUSTFS_ADDRESS=0.0.0.0:9000
-      - RUSTFS_SERVER_DOMAINS=${RUSTFS_SERVER_DOMAINS}
-      - RUSTFS_ACCESS_KEY=${RUSTFS_ACCESS_KEY}
-      - RUSTFS_SECRET_KEY=${RUSTFS_SECRET_KEY}
+      - RUSTFS_SERVER_DOMAINS=
+      - RUSTFS_ACCESS_KEY=rustfsadmin
+      - RUSTFS_SECRET_KEY=jklEdavDckw38is8tm43HUGgor9hFHmohui
     image: rustfs/rustfs:dev-production
     labels:
       createdBy: "Apps"
