@@ -22,3 +22,10 @@ additionalProperties:
       labelZh: 密钥
       required: true
       type: text
+    - default: ""
+      edit: true
+      envKey: RUSTFS_SERVER_DOMAINS
+      labelEn: Domains
+      labelZh: 域名
+      required: false
+      type: text
