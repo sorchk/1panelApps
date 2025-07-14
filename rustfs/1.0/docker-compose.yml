@@ -8,13 +8,13 @@ services:
       - ./data:/data
     user: root
     environment:
-      - TZ=Asia/
+      - TZ=Asia/Shanghai
       - RUSTFS_CONSOLE_ENABLE=true
       - RUSTFS_LOG_LEVEL=info
       - RUSTFS_ADDRESS=0.0.0.0:9000
-      #- RUSTFS_SERVER_DOMAINS=example.com
-      #- RUSTFS_ACCESS_KEY=rustfsadmin
-      #- RUSTFS_SECRET_KEY=jklEdavDckw38is8tm43HUGgor9hFHmohui
-    image: rustfs/rustfs:main
+      # - RUSTFS_SERVER_DOMAINS=example.com
+      # - RUSTFS_ACCESS_KEY=rustfsadmin
+      # - RUSTFS_SECRET_KEY=rustfsadmin
+    image: rustfs/rustfs:rustfsadmin
     labels:
       createdBy: "Apps"
