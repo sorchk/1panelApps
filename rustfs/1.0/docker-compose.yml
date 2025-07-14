@@ -15,6 +15,6 @@ services:
       # - RUSTFS_SERVER_DOMAINS=example.com
       # - RUSTFS_ACCESS_KEY=rustfsadmin
       # - RUSTFS_SECRET_KEY=rustfsadmin
-    image: rustfs/rustfs:rustfsadmin
+    image: rustfs/rustfs:dev-production
     labels:
       createdBy: "Apps"
