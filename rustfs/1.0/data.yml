@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: 9000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "rustfsadmin"
+      edit: true
+      envKey: RUSTFS_ACCESS_KEY
+      labelEn: Account
+      labelZh: 账号
+      required: true
+      type: text
+    - default: "jklEdavDckw38is8tm43HUGgor9hFHmohui"
+      edit: true
+      envKey: RUSTFS_SECRET_KEY
+      labelEn: SecretKey
+      labelZh: 密钥
+      required: true
+      type: text

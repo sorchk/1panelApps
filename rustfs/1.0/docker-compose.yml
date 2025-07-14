@@ -1,0 +1,21 @@
+services:
+  rustfs:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9000"
+    volumes:
+      - ./data/rustfs0:/data/rustfs0
+      - ./data/rustfs1:/data/rustfs1
+    environment:
+      - TZ=Asia/Shanghai
+      - RUSTFS_VOLUMES=/data/rustfs0,/data/rustfs1
+      #- RUSTFS_ADDRESS=0.0.0.0:9000
+      #- RUSTFS_SERVER_DOMAINS=example.com
+      #- RUSTFS_CONSOLE_ENABLE=true
+      #- RUSTFS_ACCESS_KEY=rustfsadmin
+      #- RUSTFS_SECRET_KEY=jklEdavDckw38is8tm43HUGgor9hFHmohui
+      #- RUSTFS_LOG_LEVEL=info
+    image: rustfs/rustfs:main
+    labels:
+      createdBy: "Apps"
