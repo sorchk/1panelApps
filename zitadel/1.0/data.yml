@@ -2,11 +2,11 @@ additionalProperties:
     formFields:
         - child:
             default: ""
-            envKey: PANEL_DB_HOST
+            envKey: ZITADEL_DATABASE_POSTGRES_HOST
             required: true
             type: service
           default: postgresql
-          envKey: PANEL_DB_TYPE
+          envKey: ZITADEL_DATABASE_POSTGRES_TYPE
           labelEn: Database Service
           labelZh: 数据库服务
           required: true
@@ -15,7 +15,7 @@ additionalProperties:
             - label: PostgreSQL
               value: postgresql
         - default: zitadel
-          envKey: PANEL_DB_NAME
+          envKey: ZITADEL_DATABASE_POSTGRES_DATABASE
           labelEn: Database
           labelZh: 数据库名
           random: true
@@ -23,7 +23,7 @@ additionalProperties:
           rule: paramCommon
           type: text
         - default: zitadel
-          envKey: PANEL_DB_USER
+          envKey: ZITADEL_DATABASE_POSTGRES_USER_USERNAME
           labelEn: User
           labelZh: 数据库用户
           random: true
@@ -31,7 +31,7 @@ additionalProperties:
           rule: paramCommon
           type: text
         - default: zitadel
-          envKey: PANEL_DB_USER_PASSWORD
+          envKey: ZITADEL_DATABASE_POSTGRES_USER_PASSWORD
           labelEn: Password
           labelZh: 数据库用户密码
           random: true
@@ -39,16 +39,16 @@ additionalProperties:
           rule: paramComplexity
           type: password
         - default: postgres
-          envKey: PANEL_DB_ADMIN
-          labelEn: AdminUser
+          envKey: ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME
+          labelEn: Admin User
           labelZh: 数据库管理员
           random: true
           required: true
           rule: paramCommon
           type: text
         - default: postgres
-          envKey: PANEL_DB_ADMIN_PASSWORD
-          labelEn: AdminPassword
+          envKey: ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD
+          labelEn: Admin Password
           labelZh: 数据库管理员密码
           random: true
           required: true
@@ -63,10 +63,28 @@ additionalProperties:
           rule: paramPort
           type: number
         - default: d41d8cd98f00b204e9800998ecf8427e
-          envKey: PANEL_MASTER_KEY
-          labelEn: Masterkey
+          envKey: ZITADEL_MASTERKEY
+          labelEn: Master key
           labelZh: 主密钥
           random: true
           required: true
           rule: paramCommon
           type: text
+        - default: https://auth.sction.com
+          edit: true
+          envKey: ZITADEL_EXTERNALDOMAIN
+          labelEn: External URL
+          labelZh: 外部访问地址
+          required: true
+          rule: paramHttp
+          type: text
+        - default: 443
+          edit: true
+          envKey: ZITADEL_EXTERNALPORT
+          labelEn: External Port
+          labelZh: 外部访问端口
+          required: true
+          rule: paramPort
+          type: number
+
+          
