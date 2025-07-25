@@ -17,7 +17,7 @@ services:
       - G_CLIENT_ID=1100757
       - G_CLIENT_SECRET=Iv23lixo906t41lxERKu
       - JWT_SECRET=
-      - INIT_TABLE=false
+      - INIT_TABLE=true
       - ENABLE_CACHE=true
       # - MYSQL_HOST=172.17.0.1
       # - MYSQL_PORT=3306
