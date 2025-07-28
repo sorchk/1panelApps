@@ -1,0 +1,15 @@
+services:
+  minas:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8003"
+    # network_mode: host
+    volumes:
+      - ./data:/app/data
+      - ${DATA_DIR}:/data
+    environment:
+      - TZ=Asia/Shanghai
+    image: sorc/minas:1.3.3
+    labels:
+      createdBy: "Apps"
