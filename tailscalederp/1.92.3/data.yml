@@ -1,0 +1,26 @@
+additionalProperties:
+  formFields:
+    - default: 30303
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3478
+      edit: true
+      envKey: STUN_PORT
+      labelEn: tun Port
+      labelZh: 隧道端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: HOSTNAME
+      labelEn: Domain
+      labelZh: 域名
+      required: true
+      rule: paramDomain
+      type: text

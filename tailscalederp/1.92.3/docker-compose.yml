@@ -1,0 +1,22 @@
+services:
+  derp:
+    image: sorc/tailscale-derp:1.92.3
+    container_name: tailscale-derp
+    volumes:
+      - /var/run/tailscale/:/var/run/tailscale/
+    environment:
+      HOSTNAME: ${HOSTNAME}
+      PORT: ${PANEL_APP_PORT_HTTP}
+      STUN_PORT: ${STUN_PORT}
+      CERT_MODE: letsencrypt
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}/tcp"
+      - "${STUN_PORT}:${STUN_PORT}/udp"
+    restart: always
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
