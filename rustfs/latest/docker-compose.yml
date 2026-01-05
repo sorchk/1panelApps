@@ -15,6 +15,6 @@ services:
       - RUSTFS_SERVER_DOMAINS=localhost
       - RUSTFS_ACCESS_KEY=rustfsadmin
       - RUSTFS_SECRET_KEY=jklEdavDckw38is8tm43HUGgor9hFHmohui
-    image: rustfs/rustfs:dev-production
+    image: rustfs/rustfs:latest
     labels:
       createdBy: "Apps"

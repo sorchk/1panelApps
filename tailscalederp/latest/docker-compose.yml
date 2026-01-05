@@ -1,6 +1,6 @@
 services:
   derp:
-    image: sorc/tailscale-derp:1.90.9
+    image: sorc/tailscale-derp:latest
     container_name: tailscale-derp
     volumes:
       - /var/run/tailscale/:/var/run/tailscale/

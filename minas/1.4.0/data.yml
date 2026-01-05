@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: 8003
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: /datadisk/backup
+      edit: true
+      envKey: DATA_DIR
+      labelEn: data directory
+      labelZh: 数据目录
+      type: text
