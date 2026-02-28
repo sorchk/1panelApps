@@ -1,14 +1,25 @@
+name: fast-note-sync-service
+tags:
+    - 实用工具
+title: Obsidian实时同步服务
+description: Obsidian实时同步服务
 additionalProperties:
   key: fast-note-sync-service   #应用的 key ，仅限英文，用于在 Linux 创建文件夹
   name: fast-note-sync-service  #应用名称
   tags:
     - Tool #应用标签，可以有多个，请参照下方的标签列表
-  shortDescZh: fast-note-sync-service 服务 #应用中文描述，不要超过30个字
-  shortDescEn: fast-note-sync-service Server #应用英文描述
-  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
+  shortDescZh: Obsidian实时同步服务 #应用中文描述，不要超过30个字
+  shortDescEn: Obsidian实时同步服务 #应用英文描述
+  description:
+    en: Obsidian实时同步服务
+    zh: Obsidian实时同步服务
+  type: website
   crossVersionUpdate: true  #是否可以跨大版本升级
   limit: 1 #应用安装数量限制，0 代表无限制
   recommend: 0
   website:  #官网地址
   github:  https://github.com/haierkeys/fast-note-sync-service
   document:  https://github.com/haierkeys/fast-note-sync-service/blob/master/docs/README.zh-CN.md
+  architectures:
+    - amd64
+    - arm64
