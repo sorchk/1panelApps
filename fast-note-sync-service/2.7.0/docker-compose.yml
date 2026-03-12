@@ -10,6 +10,6 @@ services:
       - ./data:/fast-note-sync/data
     environment:
       - TZ=Asia/Shanghai
-    image: haierkeys/fast-note-sync-service:2.3.0
+    image: haierkeys/fast-note-sync-service:2.7.0
     labels:
       createdBy: "Apps"
