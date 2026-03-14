@@ -1,10 +1,10 @@
 additionalProperties:
   formFields:
-    - default: 9000
+    - default: 8004
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
-      labelZh: 端口
+      labelZh: web端口
       required: true
       rule: paramPort
       type: number

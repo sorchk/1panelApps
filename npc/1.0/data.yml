@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: mgrip.sction.org:1440
+      edit: true
+      envKey: NPS_SERVER
+      labelEn: npsServer
+      labelZh: nps服务器地址
+      required: true
+      type: text
+    - default: ''
+      edit: true
+      envKey: NPS_KEY
+      labelEn: npsKey
+      labelZh: nps令牌
+      required: true
+      type: text

@@ -1,0 +1,9 @@
+services:
+  minas:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    image: sorc/nidle:latest
+    labels:
+      createdBy: "Apps"

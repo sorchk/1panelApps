@@ -1,0 +1,19 @@
+services:
+  v2raya:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    privileged: true
+    network_mode: host
+    volumes:
+      - /lib/modules:/lib/modules:ro
+      - /etc/resolv.conf:/etc/resolv.conf
+      - /etc/v2raya:/etc/v2raya
+    environment:
+      - TZ=Asia/Shanghai
+      - IPTABLES_MODE=legacy
+      - V2RAYA_NFTABLES_SUPPORT=off
+      - V2RAYA_LOG_FILE=/tmp/v2raya.log
+      - V2RAYA_ADDRESS=${SERVER_IP}:${SERVER_PORT}
+    image: mzz2017/v2raya:v2.2.7.5
+    labels:
+      createdBy: "Apps"

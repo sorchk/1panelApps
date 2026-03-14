@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: 2017
+      edit: true
+      envKey: SERVER_PORT
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 127.0.0.1
+      edit: true
+      envKey: SERVER_IP
+      labelEn: Ip
+      labelZh: Ip地址
+      type: text

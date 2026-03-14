@@ -1,0 +1,12 @@
+services:
+  nginx:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data/conf.d:/etc/nginx/conf.d
+    environment:
+      - TZ=Asia/Shanghai
+    image: nginx:1.28
+    labels:
+      createdBy: "Apps"

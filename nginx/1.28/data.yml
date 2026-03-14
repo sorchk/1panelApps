@@ -1,0 +1,10 @@
+additionalProperties:
+  formFields:
+    - default: 9180
+      edit: true
+      envKey: NGINX_PORT
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number

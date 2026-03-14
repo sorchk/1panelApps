@@ -1,0 +1,15 @@
+services:
+  fnss:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9000"
+    # network_mode: host
+    volumes:
+      - ./config:/fast-note-sync/config
+      - ./data:/fast-note-sync/storage
+    environment:
+      - TZ=Asia/Shanghai
+    image: haierkeys/fast-note-sync-service:latest
+    labels:
+      createdBy: "Apps"
